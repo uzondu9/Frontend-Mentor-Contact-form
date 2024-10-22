@@ -34,6 +34,7 @@ body{
     border-radius: 0.5em;
 }
 
+
 h1{
     color: $dark-grey;
     padding-bottom: 1em;
@@ -50,10 +51,21 @@ label{
 
 .form-cont{
     background-color: $white;
-    padding: 1em;
-    border-radius: 0.5em;
-    width: 90vw;
-    margin: auto 5vw;
+    padding: 2em;
+    border-radius: 0.85em;
+    width: 60vw;
+    margin: auto 20vw;
+
+    @media (max-width: 63em) {
+        width: 90vw;
+        margin: auto 5vw;
+    }
+
+    @media (min-width: 84em) {
+        width: 50vw;
+        margin: auto 25vw;
+    }
+
 }
 
 .error{
@@ -80,9 +92,7 @@ label{
 
     .lastNameBox{
         flex-basis: 100%;
-        input{
-            @extend %input-slide;
-        }
+        input{@extend %input-slide;}
         @media (min-width: 48em) {
             flex-basis: 48%;    
         }
@@ -90,9 +100,7 @@ label{
 
     .emailBox{
         flex-basis: 100%;
-        input{
-            @extend %input-slide;
-        }
+        input{@extend %input-slide;}
     }
 
     @media screen and (max-width: 47em) {
@@ -108,7 +116,7 @@ label{
         }
 
         > :nth-child(3n){
-            margin-top: 1em;
+            margin-top: 1.5em;
         }
     }
 }
@@ -116,7 +124,7 @@ label{
 .queryBox{
     display: flex;
     flex-wrap: wrap;
-    margin-top: 1.5em;
+    margin-top: 1.75em;
 
     input{ @include width(2em); }
 
@@ -127,6 +135,7 @@ label{
         flex-basis: 100%;
         gap: 1em;
         @extend %input-slide;
+        padding: 0.75em;
         @media (min-width: 48em) {
             flex-basis: 48%;    
         }
@@ -140,6 +149,7 @@ label{
         > :nth-child(2n) + :nth-child(n+3){
             margin-top: 1em;
         }   
+        margin: 1.25em auto -0.75em auto;
     }
 
     @media (min-width: 48em) {
@@ -149,3 +159,12 @@ label{
     }
 }
 
+.message-box{
+    display: flex;
+    flex-direction: column;
+    margin-top: 2em;
+    textarea{
+        @extend %input-slide;
+        height: 8em;
+    }
+}
