@@ -11,6 +11,88 @@ $dark-grey: hsl(187, 24%, 22%);
     margin: 0;
 }
 
+//presets
 body{
     background-color: $light-green;
+    font-family: Karla;
+    font-size: 16px;
+}
+
+@font-face {
+    font-family: Karla;
+    src: url(/assets/fonts/Karla-VariableFont_wght.ttf);
+}
+
+@mixin width($width-property1){
+    width: $width-property1;
+}
+
+h1{
+    font-size: x-large;
+    color: $dark-grey;
+    padding-bottom: 1em;
+}
+
+label{
+    display: block;
+}
+
+input{ @include width(100%); }
+
+.form-cont{
+    background-color: $white;
+    padding: 1em;
+    border-radius: 0.5em;
+    width: 90vw;
+    margin: auto 5vw;
+}
+
+.persona{
+    display: flex;
+    flex-wrap: wrap;
+
+    .firstNameBox{
+        flex-basis: 100%;
+
+        @media (min-width: 64em) {
+            flex-basis: 48%;    
+        }
+    }
+
+    .lastNameBox{
+        flex-basis: 100%;
+
+        @media (min-width: 64em) {
+            flex-basis: 48%;    
+        }
+    }
+
+    .emailBox{
+        flex-basis: 100%;
+    }
+
+    @media screen and (max-width: 63em) {
+        > :nth-child(n) + :nth-child(n){
+            margin-top: 1em;
+        }   
+    }
+
+    @media (min-width: 64em) {
+        > :nth-child(2n){
+            margin-left: 4%;
+        }
+
+        > :nth-child(3n){
+            margin-top: 1em;
+        }
+    }
+}
+
+.queryBox{
+    display: flex;
+    flex-wrap: wrap;
+
+    #general-enquiry, #support-request{
+        display: flex;
+    }
 }
