@@ -9,8 +9,8 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
 
   <title>Frontend Mentor | Contact form</title>
-  <link rel="stylesheet" href="css/style.css">
-
+  <link rel="stylesheet" href="css/mobile.css">
+  <link rel="stylesheet" href="css/desktop.css">
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
     .attribution {
@@ -31,37 +31,41 @@
       <div class="persona">
         <div class="firstNameBox">
           <label for="firstName" class="text">First Name <span class="star">*</span></label>
-          <input type="text" id="firstName">
-          <p class="error text" >This field is required</p>
+          <input type="text" id="firstName" autocomplete="on">
+          <p class="error text">This field is required</p>
         </div>
         <div class="lastNameBox">
           <label for="lastName">Last Name <span class="star">*</span></label>
-          <input type="text" id="lastName">
+          <input type="text" id="lastName" autocomplete="on">
           <p class="error text">This field is required</p>
         </div>
-        <div class="emailBox"></div>
+        <div class="emailBox">
           <label for="email">Email <span class="star">*</span></label>
-          <input type="text" id="email">
+          <input type="text" id="email" autocomplete="on">
           <p class="error text">This field is required</p>
         </div>
+      </div>
+
+      <div class="queryBox">
+        <label>Query Type <span class="star">*</span></label>
+        <div id="general-enquiry">
+          <input type="radio" name="radio" id="general-enquiry-button">
+          <p class="QueryText">General Enquiry</p>
+        </div>
+        <div id="support-request">
+          <input type="radio" name="radio" id="support-request-button">
+          <p class="QueryText">Support Request</p>
+        </div>
+        <p class="error text">Please select a query type</p>
       </div>
     </form>
   </div>
 
-  First Name
+
   
-
-  Last Name
-  This field is required
-
-  Email Address
-  Please enter a valid email address
-  This field is required
-
-  Query Type
-  General Enquiry
-  Support Request
-  Please select a query type
+  
+  
+  
 
   Message
   This field is required
