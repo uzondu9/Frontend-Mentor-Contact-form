@@ -16,6 +16,7 @@ body{
     background-color: $light-green;
     font-family: Karla;
     font-size: 16px;
+    transition: 1s;
 }
 
 @font-face {
@@ -27,14 +28,24 @@ body{
     width: $width-property1;
 }
 
+%input-slide{
+    padding: 1em;
+    border: 1px solid $medium-grey;
+    border-radius: 0.5em;
+}
+
 h1{
-    font-size: x-large;
     color: $dark-grey;
     padding-bottom: 1em;
 }
 
 label{
     display: block;
+    padding-bottom: 10px;
+}
+
+.star{
+    color: $green;
 }
 
 .form-cont{
@@ -45,6 +56,12 @@ label{
     margin: auto 5vw;
 }
 
+.error{
+    color: $red;
+    padding-top: 0.4em;
+    display: none;
+}
+
 .persona{
     display: flex;
     flex-wrap: wrap;
@@ -53,31 +70,39 @@ label{
 
     .firstNameBox{
         flex-basis: 100%;
-
-        @media (min-width: 64em) {
+        input{
+            @extend %input-slide;
+        }
+        @media (min-width: 48em) {
             flex-basis: 48%;    
         }
     }
 
     .lastNameBox{
         flex-basis: 100%;
-
-        @media (min-width: 64em) {
+        input{
+            @extend %input-slide;
+        }
+        @media (min-width: 48em) {
             flex-basis: 48%;    
         }
     }
 
     .emailBox{
         flex-basis: 100%;
+        input{
+            @extend %input-slide;
+        }
     }
 
-    @media screen and (max-width: 63em) {
+    @media screen and (max-width: 47em) {
         > :nth-child(n) + :nth-child(n){
-            margin-top: 1em;
+            margin-top: 1.25em;
         }   
     }
+    
 
-    @media (min-width: 64em) {
+    @media (min-width: 48em) {
         > :nth-child(2n){
             margin-left: 4%;
         }
@@ -91,17 +116,18 @@ label{
 .queryBox{
     display: flex;
     flex-wrap: wrap;
-    margin-top: 1em;
+    margin-top: 1.5em;
 
     input{ @include width(2em); }
+
+    label{padding-bottom: 15px;}
 
     #general-enquiry, #support-request{
         display: flex;
         flex-basis: 100%;
-        border: 1px inset $green;
         gap: 1em;
-        padding: 1em;
-        @media (min-width: 64em) {
+        @extend %input-slide;
+        @media (min-width: 48em) {
             flex-basis: 48%;    
         }
     }
@@ -110,13 +136,13 @@ label{
         flex-basis: 100%;
     }
 
-    @media screen and (max-width: 63em) {
-        > :nth-child(n) + :nth-child(n){
+    @media screen and (max-width: 47em) {
+        > :nth-child(2n) + :nth-child(n+3){
             margin-top: 1em;
         }   
     }
 
-    @media (min-width: 64em) {
+    @media (min-width: 48em) {
         > :nth-child(3n){
             margin-left: 4%;
         }

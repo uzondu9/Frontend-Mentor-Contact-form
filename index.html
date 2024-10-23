@@ -12,16 +12,6 @@
   <link rel="stylesheet" href="css/mobile.css">
   <link rel="stylesheet" href="css/desktop.css">
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution {
-      font-size: 11px;
-      text-align: center;
-    }
-
-    .attribution a {
-      color: hsl(228, 45%, 44%);
-    }
-  </style>
 </head>
 
 <body>
@@ -40,9 +30,9 @@
           <p class="error text">This field is required</p>
         </div>
         <div class="emailBox">
-          <label for="email">Email <span class="star">*</span></label>
+          <label for="email">Email Address <span class="star">*</span></label>
           <input type="text" id="email" autocomplete="on">
-          <p class="error text">This field is required</p>
+          <p class="error text">Please enter a valid email address</p>
         </div>
       </div>
 
@@ -58,17 +48,19 @@
         </div>
         <p class="error text">Please select a query type</p>
       </div>
+
+      <div class="message-box">
+        <label for="message-input">Message</label>
+        <textarea name="textarea" id="message-input"></textarea>
+        <p class="error text">This field is required</p>
+      </div>   
+      
+      
     </form>
   </div>
 
 
   
-  
-  
-  
-
-  Message
-  This field is required
 
   I consent to being contacted by the team
   To submit this form, please consent to being contacted
