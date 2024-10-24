@@ -166,5 +166,30 @@ label{
     textarea{
         @extend %input-slide;
         height: 8em;
+
+        @media screen and (max-width: 47em) {
+            height: 14em;
+        }
+    }
+    
+}
+
+.consent-box{
+    margin-top: 2em;
+    display: flex;
+    gap: 1em;
+}
+
+.button{
+    margin-top: 2em;
+    text-align: center;
+    a{
+        @extend %input-slide;
+        background-color: $green;
+        color: $white;
+        text-decoration: none;
+        display: flex;
+        justify-content: center;
     }
 }
+
