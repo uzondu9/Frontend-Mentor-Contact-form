@@ -1,39 +1,19 @@
-$light-green: hsl(148, 38%, 91%);
-$green: hsl(169, 82%, 27%);
-$red: hsl(0, 66%, 56%);
-$white: hsl(0, 0%, 100%);
-$medium-grey: hsl(186, 15%, 59%);
-$dark-grey: hsl(187, 24%, 22%);
+@import 'config';
+@import 'utils';
 
+//presets
 *{
     box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
 
-//presets
 body{
     background-color: $light-green;
     font-family: Karla;
     font-size: 16px;
     transition: 1s;
 }
-
-@font-face {
-    font-family: Karla;
-    src: url(/assets/fonts/Karla-VariableFont_wght.ttf);
-}
-
-@mixin width($width-property1){
-    width: $width-property1;
-}
-
-%input-slide{
-    padding: 1em;
-    border: 1px solid $medium-grey;
-    border-radius: 0.5em;
-}
-
 
 h1{
     color: $dark-grey;
@@ -51,10 +31,7 @@ label{
     padding-bottom: 10px;
 }
 
-.star{
-    color: $green;
-}
-
+//page styling
 .form-cont{
     background-color: $white;
     padding: 2em;
@@ -72,12 +49,6 @@ label{
         margin: auto 25vw;
     }
 
-}
-
-.error{
-    color: $red;
-    padding-top: 0.4em;
-    display: none;
 }
 
 .query-input, input#check-tick{
@@ -190,7 +161,8 @@ label{
 .consent-box{
     margin-top: 2em;
     display: flex;
-    gap: 1em;
+    flex-wrap: wrap;
+   > p:not(:last-child) { padding-left: 1em; padding-bottom: 0.5em;}
 }
 
 .button{
@@ -206,36 +178,6 @@ label{
     }
 }
 
-#success{
-    width: 30%;
-    margin: auto 35%;
-    margin-top: 10%;
-    padding: 20px;
-    background-color: hsl(187, 24%, 22%);
-    display: none;
-    border-radius: 10px;
-    @media (max-width: 47em){
-            width: 70%;
-            margin: auto 15%;
-    }
-}
 
-#success #textSuccess{
-    background-image: url(assets/images/icon-success-check.svg);
-    background-repeat: no-repeat;
-    background-position: top left;
-    padding-left: 25px;
-    padding-bottom: 10px;
-    font-weight: 600;
-}
-
-#success #successMessage{
-    font-weight: 200;
-}
-
-#successMessage,#textSuccess{
-   color:hsl(0, 0%, 100%);
-   font-size: 14px;
-}
 
 
