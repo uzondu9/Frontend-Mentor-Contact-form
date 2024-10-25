@@ -40,6 +40,12 @@ h1{
     padding-bottom: 1em;
 }
 
+input.name:focus, .email:focus, textarea:focus, 
+input.name:hover, .email:hover, textarea:hover{
+    outline: 1px outset hsl(169, 82%, 27%);
+    outline-width: 0.25px;
+}
+
 label{
     display: block;
     padding-bottom: 10px;
@@ -72,6 +78,12 @@ label{
     color: $red;
     padding-top: 0.4em;
     display: none;
+}
+
+.query-input, input#check-tick{
+    scale: 1.2;
+    accent-color:hsl(169, 82%, 27%); 
+    cursor: pointer;
 }
 
 .persona{
@@ -163,10 +175,11 @@ label{
     display: flex;
     flex-direction: column;
     margin-top: 2em;
+
     textarea{
         @extend %input-slide;
         height: 8em;
-
+        resize: none;
         @media screen and (max-width: 47em) {
             height: 14em;
         }
@@ -192,4 +205,37 @@ label{
         justify-content: center;
     }
 }
+
+#success{
+    width: 30%;
+    margin: auto 35%;
+    margin-top: 10%;
+    padding: 20px;
+    background-color: hsl(187, 24%, 22%);
+    display: none;
+    border-radius: 10px;
+    @media (max-width: 47em){
+            width: 70%;
+            margin: auto 15%;
+    }
+}
+
+#success #textSuccess{
+    background-image: url(assets/images/icon-success-check.svg);
+    background-repeat: no-repeat;
+    background-position: top left;
+    padding-left: 25px;
+    padding-bottom: 10px;
+    font-weight: 600;
+}
+
+#success #successMessage{
+    font-weight: 200;
+}
+
+#successMessage,#textSuccess{
+   color:hsl(0, 0%, 100%);
+   font-size: 14px;
+}
+
 

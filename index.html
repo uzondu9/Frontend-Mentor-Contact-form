@@ -15,23 +15,28 @@
 </head>
 
 <body>
+  <div id="success">
+    <p id="textSuccess"> Message Sent!</p>
+    <p id="successMessage">Thanks for completing the form. We'll be in touch soon!</p>
+  </div>
+
   <div class="form-cont">
     <h1>Contact Us</h1>
     <form action="#" class="form">
       <div class="persona">
         <div class="firstNameBox">
           <label for="firstName" class="text">First Name <span class="star">*</span></label>
-          <input type="text" id="firstName" autocomplete="on">
+          <input type="text" id="firstName" class="name" autocomplete="on">
           <p class="error text">This field is required</p>
         </div>
         <div class="lastNameBox">
           <label for="lastName">Last Name <span class="star">*</span></label>
-          <input type="text" id="lastName" autocomplete="on">
+          <input type="text" id="lastName" class="name" autocomplete="on">
           <p class="error text">This field is required</p>
         </div>
         <div class="emailBox">
           <label for="email">Email Address <span class="star">*</span></label>
-          <input type="text" id="email" autocomplete="on">
+          <input type="text" id="email" class="name" autocomplete="on">
           <p class="error text">Please enter a valid email address</p>
         </div>
       </div>
@@ -39,11 +44,11 @@
       <div class="queryBox">
         <label>Query Type <span class="star">*</span></label>
         <div id="general-enquiry">
-          <input type="radio" name="radio" id="general-enquiry-button">
+          <input type="radio" name="radio" id="general-enquiry-button" class="query-input">
           <p class="QueryText">General Enquiry</p>
         </div>
         <div id="support-request">
-          <input type="radio" name="radio" id="support-request-button">
+          <input type="radio" name="radio" id="support-request-button" class="query-input">
           <p class="QueryText">Support Request</p>
         </div>
         <p class="error text">Please select a query type</p>
@@ -56,7 +61,7 @@
       </div>
 
       <div class="consent-box">
-        <input type="checkbox" name="checkbox" id="check-tick">
+        <input type="checkbox" name="checkbox" class="query-input">
         <p class="text">I consent to being contacted by the team</p>
         <p class="error text">To submit this form, please consent to being contacted</p>
       </div>
@@ -64,18 +69,6 @@
       <div class="button"><a href="#">Submit</a></div>
     </form>
    </div>
-
-
-
-
-
-
-
-  Submit
-
-  Message Sent!
-  Thanks for completing the form. We'll be in touch soon!
-
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
     Coded by <a href="#">Your Name Here</a>.
