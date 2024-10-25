@@ -26,17 +26,17 @@
         <div class="firstNameBox">
           <label for="firstName" class="text">First Name <span class="star">*</span></label>
           <input type="text" id="firstName" class="name" autocomplete="on">
-          <p class="error text">This field is required</p>
+          <p class="error text" id="errorText1">This field is required</p>
         </div>
         <div class="lastNameBox">
           <label for="lastName">Last Name <span class="star">*</span></label>
           <input type="text" id="lastName" class="name" autocomplete="on">
-          <p class="error text">This field is required</p>
+          <p class="error text" id="errorText2">This field is required</p>
         </div>
         <div class="emailBox">
           <label for="email">Email Address <span class="star">*</span></label>
           <input type="text" id="email" class="name" autocomplete="on">
-          <p class="error text">Please enter a valid email address</p>
+          <p class="error text" id="errorText3">Please enter a valid email address</p>
         </div>
       </div>
 
@@ -50,28 +50,30 @@
           <input type="radio" name="radio" id="support-request-button" class="query-input">
           <p class="QueryText">Support Request</p>
         </div>
-        <p class="error text">Please select a query type</p>
+        <p class="error text" id="errorText4">Please select a query type</p>
       </div>
 
       <div class="message-box">
         <label for="message-input">Message</label>
         <textarea name="textarea" id="message-input"></textarea>
-        <p class="error text">This field is required</p>
+        <p class="error text" id="errorText5">This field is required</p>
       </div>
 
       <div class="consent-box">
-        <input type="checkbox" name="checkbox" class="query-input">
+        <input type="checkbox" name="checkbox" class="query-input" id="checkbox">
         <p class="text">I consent to being contacted by the team</p>
-        <p class="error text">To submit this form, please consent to being contacted</p>
+        <p class="error text" id="errorText6">To submit this form, please consent to being contacted</p>
       </div>
 
-      <div class="button"><a href="#">Submit</a></div>
+      <div class="button"><a href="#" id="submit">Submit</a></div>
     </form>
    </div>
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
     Coded by <a href="#">Your Name Here</a>.
   </div>
+
+  <script src="main.js"></script>
 </body>
 
 </html>
