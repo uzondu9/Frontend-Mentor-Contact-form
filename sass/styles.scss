@@ -2,182 +2,213 @@
 @import 'utils';
 
 //presets
-*{
+* {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-}
-
-body{
-    background-color: $light-green;
-    font-family: Karla;
-    font-size: 16px;
     transition: 1s;
 }
 
-h1{
+@font-face {
+    font-family: Karla;
+    src: url(/assets/fonts/Karla-VariableFont_wght.ttf);
+}
+
+body {
+    background-color: $light-green;
+    font-family: Karla;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+h1 {
     color: $dark-grey;
     padding-bottom: 1em;
 }
 
-input.name:focus, .email:focus, textarea:focus, 
-input.name:hover, .email:hover, textarea:hover{
+input.name:focus,
+.email:focus,
+textarea:focus,
+input.name:hover,
+.email:hover,
+textarea:hover {
     outline: 1px outset hsl(169, 82%, 27%);
     outline-width: 0.25px;
 }
 
-label{
+label {
     display: block;
     padding-bottom: 10px;
 }
 
 //page styling
-.form-cont{
+.form-cont {
     background-color: $white;
-    padding: 2em;
+    padding: 2.25em;
     border-radius: 0.85em;
     width: 60vw;
-    margin: auto 20vw;
+    margin: 10em 20vw;
 
     @media (max-width: 63em) {
         width: 90vw;
         margin: auto 5vw;
     }
-
-    @media (min-width: 84em) {
-        width: 50vw;
-        margin: auto 25vw;
-    }
-
 }
 
-.query-input, input#check-tick{
-    scale: 1.2;
-    accent-color:hsl(169, 82%, 27%); 
+.query-input,
+input#check-tick {
+    width: 20px;
+    accent-color: hsl(169, 82%, 27%);
     cursor: pointer;
 }
 
-.persona{
+.persona {
     display: flex;
     flex-wrap: wrap;
 
-    input{ @include width(100%); }
+    input {
+        @include width(100%);
+    }
 
-    .firstNameBox{
+    .firstNameBox {
         flex-basis: 100%;
-        input{
+
+        input {
             @extend %input-slide;
         }
+
         @media (min-width: 48em) {
-            flex-basis: 48%;    
+            flex-basis: 48%;
         }
     }
 
-    .lastNameBox{
+    .lastNameBox {
         flex-basis: 100%;
-        input{@extend %input-slide;}
+
+        input {
+            @extend %input-slide;
+        }
+
         @media (min-width: 48em) {
-            flex-basis: 48%;    
+            flex-basis: 48%;
         }
     }
 
-    .emailBox{
+    .emailBox {
         flex-basis: 100%;
-        input{@extend %input-slide;}
+
+        input {
+            @extend %input-slide;
+        }
     }
 
     @media screen and (max-width: 47em) {
-        > :nth-child(n) + :nth-child(n){
+        > :nth-child(n)+ :nth-child(n) {
             margin-top: 1.25em;
-        }   
+        }
     }
-    
+
 
     @media (min-width: 48em) {
-        > :nth-child(2n){
+        > :nth-child(2n) {
             margin-left: 4%;
         }
 
-        > :nth-child(3n){
+        > :nth-child(3n) {
             margin-top: 1.5em;
         }
     }
 }
 
-.queryBox{
+.queryBox {
     display: flex;
     flex-wrap: wrap;
     margin-top: 1.75em;
 
-    input{ @include width(2em); }
+    input {
+        @include width(2em);
+    }
 
-    label{padding-bottom: 15px;}
+    label {
+        padding-bottom: 15px;
+    }
 
-    #general-enquiry, #support-request{
+    #general-enquiry,
+    #support-request {
         display: flex;
         flex-basis: 100%;
         gap: 1em;
         @extend %input-slide;
         padding: 0.75em;
+
         @media (min-width: 48em) {
-            flex-basis: 48%;    
+            flex-basis: 48%;
         }
     }
 
-    > label{
+    >label {
         flex-basis: 100%;
     }
 
     @media screen and (max-width: 47em) {
-        > :nth-child(2n) + :nth-child(n+3){
+        > :nth-child(2n)+ :nth-child(n+3) {
             margin-top: 1em;
-        }   
+        }
+
         margin: 1.25em auto -0.75em auto;
     }
 
     @media (min-width: 48em) {
-        > :nth-child(3n){
+        > :nth-child(3n) {
             margin-left: 4%;
         }
     }
 }
 
-.message-box{
+.message-box {
     display: flex;
     flex-direction: column;
     margin-top: 2em;
 
-    textarea{
+    textarea {
         @extend %input-slide;
         height: 8em;
         resize: none;
+
         @media screen and (max-width: 47em) {
             height: 14em;
         }
     }
-    
+
 }
 
-.consent-box{
+.consent-box {
     margin-top: 2em;
     display: flex;
-    flex-wrap: wrap;
-   > p:not(:last-child) { padding-left: 1em; padding-bottom: 0.5em;}
+
+    >p {
+        padding-left: 1em;
+        padding-bottom: 0.5em;
+        height: fit-content;
+    }
 }
 
-.button{
+.button {
     margin-top: 2em;
     text-align: center;
-    a{
+
+    a {
         @extend %input-slide;
         background-color: $green;
         color: $white;
         text-decoration: none;
         display: flex;
         justify-content: center;
+        transition: 0.75s;
+        cursor: -webkit-grab;
+    }
+
+    a:hover {
+        background-color: hsl(187, 24%, 22%);
     }
 }
-
-
-
-

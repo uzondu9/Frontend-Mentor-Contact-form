@@ -165,9 +165,7 @@ submit.addEventListener('click', (x)=> {
     sendMessage();
 });
 
-
-
-
+//Attribution
 
 
 

@@ -1,50 +1,43 @@
 //global rulesets
-@font-face {
-    font-family: Karla;
-    src: url(/assets/fonts/Karla-VariableFont_wght.ttf);
-}
-
-%input-slide{
-    padding: 1em;
-    border: 1px solid $medium-grey;
-    border-radius: 0.5em;
-}
-
-.error{
+.error {
     color: $red;
     padding-top: 0.4em;
     display: none;
 }
 
-.star{
+.star {
     color: $green;
 }
 
 //success message widget
-#success{
+#success {
     width: 30%;
-    margin: 10% 35% auto;
+    margin: 6em 35% auto;
     padding: 20px;
     background-color: hsl(187, 24%, 22%);
     display: none;
     border-radius: 10px;
-    @media (max-width: 47em){
-            width: 70%;
-            margin: auto 15%;
+
+    @media (max-width: 47em) {
+        width: 70%;
+        margin: auto 15%;
     }
 }
 
-#success #textSuccess{
+#success #textSuccess {
     background: url(/assets/images/icon-success-check.svg) no-repeat top left;
-    padding: 0 0 10px 25px ;
+    padding: 0 0 10px 25px;
     font-weight: 600;
 }
 
-#success #successMessage{
+#success #successMessage {
     font-weight: 200;
 }
 
-#successMessage,#textSuccess{
-   color:hsl(0, 0%, 100%);
-   font-size: 14px;
+#successMessage,
+#textSuccess {
+    color: hsl(0, 0%, 100%);
+    font-size: 14px;
 }
+
+//attribution footer
